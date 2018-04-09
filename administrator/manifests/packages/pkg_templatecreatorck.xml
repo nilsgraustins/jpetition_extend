@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="3.0" method="upgrade">
+	<name>Template Creator Package</name>
+	<author>Cédric KEIFLIN</author>
+	<copyright>Copyright (C) 2013. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<creationDate>Avril 2013</creationDate>
+ 	<packagename>templatecreatorck</packagename>
+	 <version>3.5.3</version>
+	 <url>http://www.template-creator.com</url>
+	 <description>Template Creator CK 3 Installer Package : The component Template Creator CK and the preview template have been installed successfully.</description>
+	 <files folder="packages">
+		 <file type="component" id="com_templateck">com_templateck_3.5.3.zip</file>
+		 <file type="template" id="templatecreatorck" client="site">tpl_templatecreatorck_3.4.0.zip</file>
+	 </files>
+</extension>

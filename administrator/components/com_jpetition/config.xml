@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <fieldset name="general"
+		label="COM_JPETITION_GENERAL"
+    >
+        
+        <field 
+            name="days_count"
+			type="text"
+            size="50"
+			default="92"
+            label="COM_JPETITION_CONFIG_DAYS_COUND" />
+        
+        <field 
+            name="needed_signs"
+			type="text"
+            size="50"
+			default="250"
+            label="COM_JPETITION_CONFIG_NEEDED_SIGNS" />
+    </fieldset>
+    <fieldset name="notifications"
+		label="COM_JPETITION_NOTIFICATIONS"
+    >
+        
+        <field 
+            name="notification_new_petition"
+			type="checkbox"
+            value="1"
+            default="0"
+            label="COM_JPETITION_CONFIG_NOTIFICATION_NEW_PETITION" />
+        
+        <field 
+            name="notification_publication"
+			type="checkbox"
+            value="1"
+            default="0"
+            label="COM_JPETITION_CONFIG_NOTIFICATION_PUBLICATION" />
+        
+        <field type="spacer" hr="true" />
+        
+        <field 
+            name="notification_author_answer"
+			type="checkbox"
+            value="1"
+            default="0"
+            label="COM_JPETITION_CONFIG_NOTIFICATION_AUTHOR_ANSWER" />        
+        
+        <field 
+            name="notification_signatories_answer"
+			type="checkbox"
+            value="1"
+            default="0"
+            label="COM_JPETITION_CONFIG_NOTIFICATION_SIGNATORIES_ANSWER" />        
+        
+        <field type="spacer" hr="true" />
+        <field 
+            name="notification_author_end_collect_signs"
+			type="checkbox"
+            value="1"
+            default="0"
+            label="COM_JPETITION_CONFIG_NOTIFICATION_AUTHOR_END_COLLECT_SIGNS" 
+            description="COM_JPETITION_CONFIG_NOTIFICATION_AUTHOR_END_COLLECT_SIGNS_DESC" />
+        
+        <field 
+            type="note" 
+            label="CRON link: {YOUR_DOMAIN}/index.php?option=com_jpetition&amp;view=petitions&amp;layout=eucollectsigns" />
+            
+        <field type="spacer" hr="true" />
+        <field 
+            name="notification_admin_received_needed_count_signs"
+			type="checkbox"
+            value="1"
+            default="0"
+            label="COM_JPETITION_CONFIG_NOTIFICATION_ADMIN_PETITIONS_RECEIVED_NEEDED_COUNT_SIGNS"
+            description="COM_JPETITION_CONFIG_NOTIFICATION_ADMIN_PETITIONS_RECEIVED_NEEDED_COUNT_SIGNS_DESC" />
+        
+        <field 
+            type="note" 
+            label="CRON link: {YOUR_DOMAIN}/index.php?option=com_jpetition&amp;view=petitions&amp;layout=eacollectsigns" />
+        
+        <field type="spacer" hr="true" />
+        <field 
+            name="email_for_notification"
+			type="text"
+            size="50"
+			default=""
+            label="COM_JPETITION_CONFIG_EMAIL_FOR_NOTIFICATIONS" />
+        
+    </fieldset>
+	<fieldset name="permissions"
+		label="JCONFIG_PERMISSIONS_LABEL"
+		description="JCONFIG_PERMISSIONS_DESC"
+	>
+
+		<field name="rules"
+			type="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			validate="rules"
+			filter="rules"
+			component="com_contact"
+			section="component" />
+	</fieldset>
+</config>

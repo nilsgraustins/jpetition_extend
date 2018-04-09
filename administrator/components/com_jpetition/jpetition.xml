@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+	<name>COM_JPETITION</name>
+	<creationDate>13 April 2017</creationDate>
+	<author>Daniel Rjadko</author>
+	<authorEmail>danielrjadko@gmail.com</authorEmail>
+	<authorUrl>http://www.drjadko.org</authorUrl>
+	<copyright>Copyright (C) 2016 www.drjadko.org. All rights reserved.</copyright>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<version>1.0.5</version>
+	<description>COM_JPETITION_DESCRIPTION</description>
+
+	<install>
+  		<sql>
+    		<file charset="utf8" driver="mysql">install/install.mysql.sql</file>
+  		</sql>
+	</install>
+
+	<uninstall>
+		<sql>
+			<file charset="utf8" driver="mysql">install/uninstall.mysql.sql</file>
+		</sql>
+	</uninstall>
+	
+	<update>
+		<schemas>
+			<schemapath type="mysql">updates/mysql</schemapath>
+		</schemas>
+	</update>
+	
+	<scriptfile>install.php</scriptfile>
+	
+	<files folder="site">
+		<folder>assets</folder>
+		<folder>files</folder>
+		<folder>helpers</folder>
+		<folder>language</folder>
+		<folder>models</folder>
+		<folder>tables</folder>
+		<folder>views</folder>
+		<filename>index.html</filename>
+		<filename>jpetition.php</filename>
+		<filename>router.php</filename>
+		<filename>controller.php</filename>
+	</files>	
+
+	<languages folder="site">
+		<language tag="en-GB">language/en-GB/en-GB.com_jpetition.ini</language>
+		<language tag="uk-UA">language/uk-UA/uk-UA.com_jpetition.ini</language>
+		<language tag="ru-RU">language/ru-RU/ru-RU.com_jpetition.ini</language>
+		<language tag="pl-PL">language/pl-PL/pl-PL.com_jpetition.ini</language>
+	</languages>
+	
+	<administration>
+		<menu link="option=com_jpetition">COM_JPETITION</menu>
+
+		<files folder="admin">
+			<folder>assets</folder>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>language</folder>
+			<folder>models</folder>
+			<folder>views</folder>
+			<folder>install</folder>
+			<folder>updates</folder>
+			<filename>controller.php</filename>
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>jpetition.php</filename>
+			<filename>index.html</filename>
+		</files>
+		
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_jpetition.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_jpetition.sys.ini</language>
+			<language tag="uk-UA">language/uk-UA/uk-UA.com_jpetition.ini</language>
+			<language tag="uk-UA">language/uk-UA/uk-UA.com_jpetition.sys.ini</language>
+			<language tag="ru-RU">language/ru-RU/ru-RU.com_jpetition.ini</language>
+			<language tag="ru-RU">language/ru-RU/ru-RU.com_jpetition.sys.ini</language>
+			<language tag="pl-PL">language/pl-PL/pl-PL.com_jpetition.ini</language>
+			<language tag="pl-PL">language/pl-PL/pl-PL.com_jpetition.sys.ini</language>
+		</languages>
+	</administration>
+	
+	<!-- Update servers -->
+    <updateservers>
+        <server type="extension" priority="1" name="JPetition">http://www.drjadko.org/updates/jpetition.xml</server>
+    </updateservers>
+</extension>

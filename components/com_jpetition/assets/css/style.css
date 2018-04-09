@@ -1,0 +1,188 @@
+.count-signed{
+	color: #5a2925;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    line-height: 22px;
+    padding: 0 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.petition-votes{
+	text-align: center;
+	margin-top: 10px;
+	position: relative;
+}
+.petition-count-votes{
+	font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 30px;
+    text-align: center;
+}
+.petition-votes-text{
+    left: 0;
+    position: absolute;
+    top: 85px;
+    width: 100%;
+}
+.petition-signs-count{
+	font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    text-align: center;
+}
+.petition-signs-needed{
+	font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    text-align: center;
+}
+.show_signing_list{
+    text-align: right;
+}
+.petition_signing{
+    background-color: #e6e9ed;
+    padding: 10px 15px;
+	margin-top: 20px;
+    margin-bottom: 10px;
+}
+.jpetition{
+	font-size: 15px;
+	line-height: 22px;
+}
+.petition_start_signing{
+	padding-bottom: 10px;
+}
+.jpetition h3{
+	letter-spacing: 0;
+	margin-bottom: 5px;
+}
+.petition-days-left{
+	text-align: center;
+	padding: 10px 20px;
+	font-size: 16px;
+    letter-spacing: 0.5px;
+	margin-bottom: 20px;
+}
+.petition-days-left > span{
+	display: block;
+	font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 30px;
+	padding-top: 10px;
+}
+.petition-sign{
+	color: #5a2925;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    line-height: 22px;
+    padding: 0 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.petition-sign .btn-sign-petition{
+	display: block;
+	margin: 10px auto 0;
+}
+.petition-login{
+	border: 1px solid #df4040;
+	font-size: 14px;
+	line-height: 20px;
+	text-transform: none;
+	color: #df4040;
+	margin-top: 10px;
+	padding: 10px;
+}
+.petition-login a{
+	color: #df4040;
+	text-decoration: underline;
+}
+.petition-was-signed{
+	color: green;
+	font-size: 14px;
+	line-height: 20px;
+	text-transform: none;
+	padding: 10px;
+}
+.petition-search{
+    float: right;
+}
+.btn-petition-search{
+}
+.petition-search-input{
+    width: 180px;
+}
+.table-petition .th-count-signing{
+    width: 150px;
+}
+.table-petition .th-days-left{
+    width: 150px;
+}
+.table-petition .td-days-left{
+    text-align: center;
+}
+.table-petition .td-count-signing{
+    text-align: center;
+}
+.no-petitions, .petition, .petition-vote{
+
+}
+.petition-sorting{
+    display: none;
+}
+.petition-show-mobile{
+    display: none;
+}
+
+@media (max-width: 1200px){
+    .no-petitions, .petition, .petition-vote{
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 767px){
+    .petition-search{
+        float: none;
+    }
+    .petition-show-mobile{
+        display: block;
+        font-weight: bold;
+    }
+    .petition-sorting{
+        line-height: 28px;
+        display: block;
+        float: right;
+    }
+    .petition-sorting > a:first-child{
+        padding: 0;
+    }
+    .petition-sorting > a{
+        padding-left: 10px;
+    }
+    .table-petition > thead > tr > th{
+        display: none;
+    }
+    .table-petition > tbody > tr > td{
+        border: none;
+        display: block;
+        padding: 2px 0;
+    }
+    .table-petition > tbody > tr > td:first-child{
+        padding-top: 8px;
+    }
+    .table-petition > tbody > tr > td.td-days-left{
+        text-align: left;
+    }
+    .table-petition > tbody > tr > td.td-count-signing{
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 8px;
+    }
+    .table-petition > tbody > tr > td.td-days-left > .petition-show-mobile{
+        display: inline-block;
+    }
+    .table-petition > tbody > tr > td.td-count-signing > .petition-show-mobile{
+        display: inline-block;
+    }
+}

@@ -1,0 +1,30 @@
+.jp-icon{
+    height: 100px;
+    width: 110px;
+    border: 1px solid #e18728;
+    float: left;
+    border-radius: 5px;
+}
+.jp-icon:hover{
+    border: 1px solid #e18728;
+    -webkit-box-shadow: inset 0px 0px 8px 1px rgba(225,135,40,1);
+    -moz-box-shadow: inset 0px 0px 8px 1px rgba(225,135,40,1);
+    box-shadow: inset 0px 0px 8px 1px rgba(225,135,40,1);
+}
+.jp-icon > a{
+    display: block;
+    text-align: center;
+    padding-top: 5px;
+    color: #000;
+}
+.jp-icon > a > i{
+    color: #e18728;
+    margin: 0 auto;
+    display: block;
+    width: 52px;
+    margin-top: 10px;
+}
+.jp-icon > a:hover{
+    text-decoration: none;
+    color: #000;
+}
