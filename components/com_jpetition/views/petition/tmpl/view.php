@@ -40,7 +40,9 @@ defined('_JEXEC') or die();
 
                 <h3><?php echo JText::_('COM_JPETITION_PETITION_TEXT'); ?></h3>
                 <div class="petition_text">
-                    <?php echo $this->item->text; ?>
+                    <?php echo $this->item->text;
+                    //JConfig::sh($this->item );
+                    ?>
                 </div>
 
 				<?php if ($this->item->state == 2) : ?>

@@ -49,3 +49,5 @@ $app = JFactory::getApplication('administrator');
 
 // Execute the application.
 $app->execute();
+
+//echo '<hr/><pre>';print_r( get_included_files() );

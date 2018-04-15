@@ -26,12 +26,12 @@ class JPetitionModelAdmin extends JPetitionModelBase
     public function __construct($config = array())
 	{
         $this->componentParams = JComponentHelper::getParams('com_jpetition');
-
 		parent::__construct($config);
 	}
-    
+        
     public function publish($cid, $value)
 	{
+       // JConfig::sh($this); die;//JPetitionModelAdmi
         foreach ($cid as $petitionId){
             $petition = JTable::getInstance('Petition', 'Table');
             $petition->load($petitionId);
@@ -73,7 +73,7 @@ class JPetitionModelAdmin extends JPetitionModelBase
                     'table'             => 'petition',
                     'id'                => $item->id,
                     'answer'            => $answer,
-					'state'				=> self::STATE_PROCESSED
+                    'state'     	=> self::STATE_PROCESSED
                 );
                 
                 $object = $this->store($data);

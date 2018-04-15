@@ -58,7 +58,9 @@ defined('_JEXEC') or die();
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($this->items as $i => $item) : ?>
+                <?php 
+                //JConfig::sh(get_included_files());
+                foreach ($this->items as $i => $item) : ?>
                 <tr class="row<?php echo $i % 2; ?>" sortable-group-id="<?php echo $item->id; ?>">
                     <td class="center">
                         <?php echo JHtml::_('grid.id', $i, $item->id); ?>

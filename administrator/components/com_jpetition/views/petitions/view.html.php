@@ -77,6 +77,8 @@ class JPetitionViewPetitions extends JViewLegacy
         if ($this->filterState == self::PETITIONS_STATE_NOT_PUBLISHED){
             JToolbarHelper::publish('petitions.publish', 'JTOOLBAR_PUBLISH', true);
         }
+            JToolbarHelper::addNew('petition.add', 'JTOOLBAR_NEW', false);
+
         JToolbarHelper::back('COM_JPETITION_CONTROL_PANEL', 'index.php?option=com_jpetition');
         JToolbarHelper::link('http://www.drjadko.org/donate', JText::_('COM_JPETITION_DONATE'), 'help');
     }

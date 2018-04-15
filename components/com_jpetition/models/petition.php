@@ -9,9 +9,9 @@
 
 defined('_JEXEC') or die(); 
  
-class JPetitionModelPetition extends JPetitionModelBase
+class JPetitionModelPetition extends JPetitionModelBase 
 {
-
+//Nils
     const STATE_NOT_PUBLISHED = 0;
 	const STATE_PUBLISHED = 1;
 	const STATE_PROCESSED = 2;
@@ -34,7 +34,7 @@ class JPetitionModelPetition extends JPetitionModelBase
     public function __construct($config = array())
 	{
         $this->componentParams = JComponentHelper::getParams('com_jpetition');
-
+ 
 		parent::__construct($config);
 	}
     
@@ -97,15 +97,14 @@ class JPetitionModelPetition extends JPetitionModelBase
                 }
                 
                 $db->setQuery($query);
-				$data = $db->loadObject();
-
+				$data = $db->loadObject(); // te it text ar visiem tagiem;
 				if (empty($data)) {
 					return JFactory::getApplication()->enqueueMessages(JText::_('COM_JPETITION_PETITION_NOT_FOUND'), 'error');
 				}
 
                 $durationInSeconds = convertDaysToSeconds($this->componentParams->get('days_count', 92));
                 $data->signingBeforeTime = date('Y-m-d H:i:s', strtotime($data->start_signing) + $durationInSeconds);
-                
+//                JConfig::sh($data);
 				$this->_item[$pk] = $data;
 			} catch (Exception $e) {
 				if ($e->getCode() == 404){

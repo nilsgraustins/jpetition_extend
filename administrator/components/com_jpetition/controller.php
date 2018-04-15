@@ -8,7 +8,7 @@
 */
 
 defined('_JEXEC') or die;
-
+//use Joomla\CMS\Editor;
 class JPetitionController extends JControllerLegacy
 {
 	public function __construct($config = array())
@@ -19,7 +19,9 @@ class JPetitionController extends JControllerLegacy
         JModelLegacy::addIncludePath(JPATH_COMPONENT_SITE . '/models');
         JModelLegacy::getInstance('Petitions', 'JPetitionModel')->notifyAuthorAboutEndOfCollectionSignatures();
         JModelLegacy::getInstance('Petitions', 'JPetitionModel')->notifyAdminAboutPetitionsWhatCollectedSignatures();
-        
+        //$e  = new Joomla\CMS\Editor\Editor();//        JConfig::sh($e);//Nils
+        //$tm = new PlgEditorTinymce();
+        // JConfig::sh($_GET);
         parent::__construct($config);
 	}
 
@@ -28,6 +30,7 @@ class JPetitionController extends JControllerLegacy
 	 */
     public function display($cachable = false, $urlparams = false)
 	{
+        
         $vName = $this->input->getCmd('view', 'panel');
 		$this->input->set('view', $vName);
         

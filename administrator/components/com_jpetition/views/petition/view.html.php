@@ -47,6 +47,7 @@ class JPetitionViewPetition extends JViewLegacy
 			JToolbarHelper::save('petition.answer', 'COM_JPETITION_ADD_ANSWER');
 		}
         
+        JToolbarHelper::save('petitions.save', 'JTOOLBAR_SAVE', true);
 		JToolbarHelper::back('JTOOLBAR_BACK', 'index.php?option=com_jpetition&view=petitions');
         JToolbarHelper::link('http://www.drjadko.org/donate', JText::_('COM_JPETITION_DONATE'), 'help');
     }
