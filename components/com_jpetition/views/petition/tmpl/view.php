@@ -23,7 +23,7 @@ defined('_JEXEC') or die();
 
                     <?php if ($this->item->state == 2) : ?>
                         <?php echo JText::_('COM_JPETITION_WITH_ANSWER'); ?>
-                    <?php elseif ($this->item->state == 1 && $this->item->signingBeforeTime <= getJoomlaDate() && $this->item->countSigning >= $this->componentParams->get('needed_signs', 250)) : ?>
+                    <?php elseif ($this->item->state == 1 && $this->item->signingBeforeTime <= getJoomlaDate() && $this->item->countSigning >= $this->item->needed_signs) : ?>
                         <?php echo JText::_('COM_JPETITION_IN_PROCESS'); ?>
                     <?php elseif ($this->item->state == 1 && $this->item->signingBeforeTime > getJoomlaDate()) : ?>
                         <?php echo JText::_('COM_JPETITION_ACTIVE'); ?>
@@ -55,10 +55,10 @@ defined('_JEXEC') or die();
                 <div class="petition_signing">
                     <?php if ($this->item->countSigning) : ?>
                         <a href="<?php echo JRoute::_('index.php?option=com_jpetition&view=votes&id='.$this->item->id); ?>">
-                            <?php echo sprintf(JText::_('COM_JPETITION_SIGNING'), getJoomlaDate('now', 'd.m.Y'), '<span id="petition-count-votes">'.$this->item->countSigning.'</span>', $this->componentParams->get('needed_signs', 250)); ?>
+                            <?php echo sprintf(JText::_('COM_JPETITION_SIGNING'), getJoomlaDate('now', 'd.m.Y'), '<span id="petition-count-votes">'.$this->item->countSigning.'</span>', $this->item->needed_signs); ?>
                         </a>
                     <?php else : ?>
-                        <?php echo sprintf(JText::_('COM_JPETITION_SIGNING'), getJoomlaDate('now', 'd.m.Y'), '<span id="petition-count-votes">'.$this->item->countSigning.'</span>', $this->componentParams->get('needed_signs', 250)); ?>
+                        <?php echo sprintf(JText::_('COM_JPETITION_SIGNING'), getJoomlaDate('now', 'd.m.Y'), '<span id="petition-count-votes">'.$this->item->countSigning.'</span>', $this->item->needed_signs); ?>
                     <?php endif; ?>
                 </div>
             </div>
@@ -67,13 +67,13 @@ defined('_JEXEC') or die();
                     <?php echo JText::_('COM_JPETITION_COUNT_SIGNED'); ?>
                 </div>
                 <div class="petition-votes">
-                    <canvas id="petition-votes-graph" width="250" height="250" data-needed-signs="<?php echo $this->componentParams->get('needed_signs', 250); ?>" data-signs="<?php echo $this->item->countSigning; ?>"></canvas>
+                    <canvas id="petition-votes-graph" width="250" height="250" data-needed-signs="<?php echo $this->item->needed_signs; ?>" data-signs="<?php echo $this->item->countSigning; ?>"></canvas>
                     <div class="petition-votes-text">
                         <div class="petition-count-votes" id="petition-count-votes-graph">
                             <?php echo $this->item->countSigning; ?>
                         </div>
                         <div class="petition-signs-count">
-                            <?php echo sprintf(JText::_('COM_JPETITION_SIGNS_FROM'), $this->componentParams->get('needed_signs', 250)); ?>
+                            <?php echo sprintf(JText::_('COM_JPETITION_SIGNS_FROM'), $this->item->needed_signs); ?>
                         </div>
                         <div class="petition-signs-needed">
                             <?php echo JText::_('COM_JPETITION_NEEDED'); ?>

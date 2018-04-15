@@ -52,6 +52,12 @@ defined('_JEXEC') or die();
                     <th>
                         <?php echo JHTML::_('grid.sort', JText::_('COM_JPETITION_TITLE'), 'p.title', $this->filter_order_Dir, $this->filter_order); ?>
                     </th>
+                    <th>
+                        <?php echo JHTML::_('grid.sort', JText::_('COM_JPETITION_NEEDED'), 'p.needed_signs', $this->filter_order_Dir, $this->filter_order); ?>
+                    </th>
+                    <th>
+                        <?php echo JHTML::_('grid.sort', JText::_('COM_JPETITION_STATE'), 'p.state', $this->filter_order_Dir, $this->filter_order); ?>
+                    </th>                    
                     <th width="1%" class="nowrap hidden-phone">
                         <?php echo JHTML::_('grid.sort', JText::_('JGRID_HEADING_ID'), 'p.id', $this->filter_order_Dir, $this->filter_order); ?>
                     </th>
@@ -68,7 +74,21 @@ defined('_JEXEC') or die();
                     <td class="has-context">
                         <div class="pull-left break-word">
                             <a class="hasTooltip" href="<?php echo JRoute::_('index.php?option=com_jpetition&view=petition&layout=view&id=' . $item->id); ?>" title="<?php echo JText::_('JACTION_EDIT'); ?>">
-								<?php echo $this->escape($item->title); ?>
+				<?php echo $this->escape($item->title); ?>
+                            </a>
+                        </div>
+                    </td>
+                    <td class="has-context">
+                        <div class="pull-left break-word">
+                            <a class="hasTooltip" href="<?php echo JRoute::_('index.php?option=com_jpetition&view=petition&layout=view&id=' . $item->id); ?>" title="<?php echo JText::_('JACTION_EDIT'); ?>">
+				<?php echo $this->escape($item->needed_signs); ?>
+                            </a>
+                        </div>
+                    </td>
+                    <td class="has-context">
+                        <div class="pull-left break-word">
+                            <a class="hasTooltip" href="<?php echo JRoute::_('index.php?option=com_jpetition&view=petition&layout=view&id=' . $item->id); ?>" title="<?php echo JText::_('JACTION_EDIT'); ?>">
+				<?php echo $this->escape($item->state); ?>
                             </a>
                         </div>
                     </td>

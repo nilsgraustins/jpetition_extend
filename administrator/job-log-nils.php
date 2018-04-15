@@ -23,6 +23,7 @@
  *         $e  = new Joomla\CMS\Editor\Editor();        JConfig::sh($e);
  * administrator\components\com_jpetition\controllers\petitions.php
  * add save()
+ * ALTER TABLE `lwukj_jpetition` ADD `needed_signs` int(11) unsigned NOT NULL;
 
  */
 

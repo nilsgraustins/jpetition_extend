@@ -40,12 +40,20 @@ defined('_JEXEC') or die();
                 <div>
                     
                     <select  name="state" />
-                    <option value ="0">NOT_PUBLISHED</option>
-                    <option value ="1" <?php echo $this->item->state==1 ? 'selected':null; ?> >PUBLISHED</option>
-                    <option value ="2" <?php echo $this->item->state==2 ? 'selected':null; ?> >STATE_PROCESSED</option>
+                    <option value ="0"><?php echo JText::_('COM_JPETITION_NOT_PUBLISHED'); ?></option>
+                    <option value ="1" <?php echo $this->item->state==1 ? 'selected':null; ?> ><?php echo JText::_('COM_JPETITION_PUBLISHED'); ?></option>
+                    <option value ="2" <?php echo $this->item->state==2 ? 'selected':null; ?> ><?php echo JText::_('COM_JPETITION_STATE_PROCESSED'); ?></option>
                     </select>
                 </div>
-                <HR/>
+                <hr/>
+                <div>
+                    <strong><?php echo JText::_('COM_JPETITION_NEEDED'); ?></strong>
+                </div>
+                <div>
+                    <input value="<?php echo $this->item->needed_signs; ?>" name="needed_signs" />
+                </div>
+
+                <hr/>
                 <div>
                     <strong><?php echo JText::_('COM_JPETITION_TITLE'); ?></strong>
                 </div>
@@ -58,7 +66,7 @@ defined('_JEXEC') or die();
                     //JConfig::sh( $this->form );//NULL///
                     // pubblisklas puses petiotion modelis def param
                     ?>
-                    <input value=" <?php echo $this->item->title; ?>"  name="Petitontitle" />
+                    <input value="<?php echo $this->item->title; ?>"  name="Petitontitle" />
                 </div>
                 <hr />
                 <div>

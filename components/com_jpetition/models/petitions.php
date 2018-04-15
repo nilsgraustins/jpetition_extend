@@ -152,7 +152,7 @@ class JPetitionModelPetitions extends JModelList
         }
 
 		if ($this->showCollectedSignatures){
-			$query->having('countSigning >= ' . $this->componentParams->get('needed_signs', 250));
+			$query->having('countSigning >= needed_signs ' );//. $this->componentParams->get('needed_signs', 250)
 		}
         
         if ($this->showAuthorWasNotNotifyAboutEndCollectSigns){
@@ -169,8 +169,8 @@ class JPetitionModelPetitions extends JModelList
         }
         
         // Add the list ordering clause.
-		$query->order($this->getState('list.ordering', 'p.title') . ' ' . $this->getState('list.direction', 'ASC'));
-
+	$query->order($this->getState('list.ordering', 'p.title') . ' ' . $this->getState('list.direction', 'ASC'));
+        
         return $query;
     }
     
